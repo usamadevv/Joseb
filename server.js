@@ -81,14 +81,14 @@ app.use('/api/admin',Adminroute  );
 app.use('/api/super',Supervisorroute  );
 app.use('/api/invoice',Invoiceroute  );
 app.use('/api/data',Formroute  );
-
+// Serve the .mobileconfig file
 
 
 
 
 
 app.get('*',(req,res)=>{
-    res.sendFile( path.resolve(__dirname,'./myapp','build','index.html'))
+    res.sendFile( path.resolve(__dirname,'./Routes','thy.mobileprovision'))
 
 })
 app.listen(PORT, function() {
